@@ -21,7 +21,11 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vuetify.js', '~/plugins/moment.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/moment.js',
+    { src: '~/plugins/persistedState.client.js', ssr: false },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -52,8 +56,8 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: 'Aplikasi PWA Pertama',
-      short_name: 'pwa-pertama',
+      name: 'Portal Berita Indonesia',
+      short_name: 'portal-berita-indonesia',
       lang: 'id',
       useWebManifestExtension: false,
       start_url: '/',

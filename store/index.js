@@ -2,7 +2,7 @@
 
 export const state = () => ({
   listNews: [],
-  OneNews: [],
+  oneNews: [],
   category: '',
   search: '',
   listCategories: [
