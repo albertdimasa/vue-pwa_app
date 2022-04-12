@@ -24,7 +24,7 @@ export default {
   plugins: [
     '~/plugins/vuetify.js',
     '~/plugins/moment.js',
-    { src: '~/plugins/persistedState.client.js', ssr: false },
+    '~/plugins/persistedState.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
