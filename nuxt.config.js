@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Portal Berita Indonesia',
@@ -24,7 +24,7 @@ export default {
   plugins: [
     '~/plugins/vuetify.js',
     '~/plugins/moment.js',
-    { src: '~/plugins/persistedState.client.js', ssr: false },
+    '~/plugins/persistedState.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
