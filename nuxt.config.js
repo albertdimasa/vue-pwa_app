@@ -90,5 +90,5 @@ export default {
   build: {
     vendor: ['axios', 'vuetify', 'moment'],
   },
-  serverMiddleware: ['~/middleware/redirects.js'],
+  // serverMiddleware: ['~/middleware/redirects.js'],
 }
