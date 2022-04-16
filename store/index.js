@@ -97,17 +97,23 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchListNews(store, payload) {
-    const response = await this.$axios.$get(
-      `https://api.newscatcherapi.com/v2/latest_headlines?countries=ID&topic=` +
-        payload,
-      {
-        headers: {
-          'x-api-key': 'UnCXxHCweXB2_XLc3jIGIMAZfGaadR6ZoCoQf7lcroI',
-        },
-      }
-    )
-    store.commit('setNews', response)
+  fetchListNews(store, payload) {
+    return this.$axios
+      .$get(
+        `https://api.newscatcherapi.com/v2/latest_headlines?countries=ID&topic=` +
+          payload,
+        {
+          headers: {
+            'x-api-key': 'UnCXxHCweXB2_XLc3jIGIMAZfGaadR6ZoCoQf7lcroI',
+          },
+        }
+      )
+      .then((response) => {
+        store.commit('setNews', response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   },
 
   getNews(store, slug) {
@@ -120,3 +126,7 @@ export const actions = {
     store.commit('setSearch', payload)
   },
 }
+
+// export default = {
+//   state,mutations,actions
+// }
