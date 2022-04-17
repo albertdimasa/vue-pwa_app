@@ -1,4 +1,7 @@
-# vue-nuxt_pwa
+# Portal Berita Indonesia
+
+## Overview 
+Website ini pengembangan dari Portal Berita Indonesia dengan menambahkan PWA.
 
 ## Build Setup
 
